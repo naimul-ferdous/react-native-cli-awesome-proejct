@@ -7,6 +7,7 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
+import CustomButton from './components/CustomButton';
 import {
   SafeAreaView,
   ScrollView,
@@ -24,6 +25,15 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import CustomText from './components/CustomText';
+import CustomTextInput from './components/CustomTextInput';
+import CustomImage from './components/CustomImage';
+import CustomImageBackground from './components/CustomImageBackground';
+import CustomSwitch from './components/CustomSwitch';
+import CustomActivityIndicator from './components/CustomActivityIndicator';
+import CustomModal from './components/CustomModal';
+import CustomPressable from './components/CustomPressable';
+import CustomStatusBar from './components/CustomStatusBar';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -71,8 +81,8 @@ function App(): React.JSX.Element {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <View
+        {/* <Header /> */}
+        {/* <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
           }}>
@@ -90,6 +100,22 @@ function App(): React.JSX.Element {
             Read the docs to discover what to do next:
           </Section>
           <LearnMoreLinks />
+        </View> */}
+
+        <View
+          style={{
+            backgroundColor: isDarkMode ? Colors.black : Colors.white,
+          }}>
+          <CustomText />
+          <CustomTextInput />
+          <CustomButton />
+          <CustomImage />
+          <CustomImageBackground />
+          <CustomSwitch />
+          <CustomStatusBar />
+          <CustomActivityIndicator />
+          <CustomModal />
+          <CustomPressable />
         </View>
       </ScrollView>
     </SafeAreaView>
